@@ -1,6 +1,5 @@
 import Character from '../js/character/Zombie.js';
 
-
 test('should create Zombie character', () => {
   const character = new Character('Test', 'Zombie');
   expect(character.name).toBe('Test');

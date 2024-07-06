@@ -10,7 +10,6 @@ test('should create character', () => {
   expect(character.defence).toBeUndefined();
 });
 
-
 test('should throw error for invalid name', () => {
   expect(() => new Character('', 'Bowerman')).toThrow(
     'Ошибка в параметре name',
@@ -23,13 +22,11 @@ test('should throw error for invalid name', () => {
   );
 });
 
-
 test('should throw error for invalid type', () => {
   expect(() => new Character('Test', 'InvalidType')).toThrow(
     'Ошибка в параметре type',
   );
 });
-
 
 test('should level up character', () => {
   const character = new Character('Test', 'Bowerman');
@@ -42,13 +39,11 @@ test('should level up character', () => {
   expect(character.health).toBe(100);
 });
 
-
 test('should throw error when leveling up a dead character', () => {
   const character = new Character('Test', 'Bowerman');
   character.health = 0;
   expect(() => character.levelUp()).toThrow('Нельзя воскресить мертвеца');
 });
-
 
 test('should apply damage', () => {
   const character = new Character('Test', 'Bowerman');
