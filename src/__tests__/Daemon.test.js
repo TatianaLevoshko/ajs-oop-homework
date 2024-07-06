@@ -1,4 +1,5 @@
 import Character from '../js/character/Daemon.js';
+
 test('should create Daemon character', () => {  
 	const character = new Character('Test', 'Daemon');  
 	expect(character.name).toBe('Test');  

@@ -49,7 +49,7 @@ test('should throw error when leveling up a dead character', () => {
   expect(() => character.levelUp()).toThrow('Нельзя воскресить мертвеца');
 });
 
-// Тест на нанесение урона персонажу
+
 test('should apply damage', () => {
   const character = new Character('Test', 'Bowerman');
   character.defence = 25;

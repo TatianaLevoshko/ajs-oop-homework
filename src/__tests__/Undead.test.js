@@ -1,6 +1,6 @@
 import Character from '../js/character/Undead.js';
 
-// Тест на создание корректного персонажа
+
 test('should create Undead character', () => {
   const character = new Character('Test', 'Undead');
   expect(character.name).toBe('Test');

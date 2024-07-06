@@ -1,6 +1,6 @@
 import Character from '../js/character/Magician.js';
 
-// Тест на создание корректного персонажа
+
 test('should create Magician character', () => {
   const character = new Character('Test', 'Magician');
   expect(character.name).toBe('Test');
