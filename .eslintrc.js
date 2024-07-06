@@ -6,5 +6,5 @@ module.exports = {
     jest: true,
   },
   extends: 'airbnb-base',
-  rules: {}, 
+  rules: {},
 };
