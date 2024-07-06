@@ -9,3 +9,4 @@ test('should create Bowerman character', () => {
   expect(character.attack).toBe(25);
   expect(character.defence).toBe(25);
 });
+
