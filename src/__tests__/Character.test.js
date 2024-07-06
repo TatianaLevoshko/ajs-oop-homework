@@ -13,14 +13,22 @@ test('should create character', () => {
 
 // Тест на ошибку при некорректном имени
 test('should throw error for invalid name', () => {
-  expect(() => new Character('', 'Bowerman')).toThrow('Ошибка в параметре name');
-  expect(() => new Character('T', 'Bowerman')).toThrow('Ошибка в параметре name');
-  expect(() => new Character('ThisNameIsWayTooLong', 'Bowerman')).toThrow('Ошибка в параметре name');
+  expect(() => new Character('', 'Bowerman')).toThrow(
+    'Ошибка в параметре name',
+  );
+  expect(() => new Character('T', 'Bowerman')).toThrow(
+    'Ошибка в параметре name',
+  );
+  expect(() => new Character('ThisNameIsWayTooLong', 'Bowerman')).toThrow(
+    'Ошибка в параметре name',
+  );
 });
 
 // Тест на ошибку при некорректном типе
 test('should throw error for invalid type', () => {
-  expect(() => new Character('Test', 'InvalidType')).toThrow('Ошибка в параметре type');
+  expect(() => new Character('Test', 'InvalidType')).toThrow(
+    'Ошибка в параметре type',
+  );
 });
 
 // Тест на повышение уровня персонажа

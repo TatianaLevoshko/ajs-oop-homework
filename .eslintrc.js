@@ -1,5 +1,6 @@
 module.exports = {
-  extends: 'airbnb-base',
+  extends: ['eslint:recommended', 'plugin:prettier/recommended', 'airbnb-base'],
+
   env: {
     browser: true,
     es2021: true,
@@ -7,11 +8,7 @@ module.exports = {
     node: true,
   },
   rules: {
-    'no-restricted-syntax': [
-      'error',
-      'LabeledStatement',
-      'WithStatement',
-    ],
+    'no-restricted-syntax': ['error', 'LabeledStatement', 'WithStatement'],
     'linebreak-style': ['error', 'windows'],
     'no-tabs': 'off',
     'import/extensions': [

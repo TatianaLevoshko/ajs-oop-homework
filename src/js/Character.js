@@ -1,6 +1,11 @@
 export default class Character {
   constructor(name, type) {
-    if (!name || typeof name !== 'string' || name.length < 2 || name.length > 10) {
+    if (
+      !name ||
+      typeof name !== "string" ||
+      name.length < 2
+      || name.length > 10
+    ) {
       throw new Error('Ошибка в параметре name');
     }
     const types = [
