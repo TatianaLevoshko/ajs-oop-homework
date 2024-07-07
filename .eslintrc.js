@@ -9,11 +9,13 @@ module.exports = {
   plugins: ['prettier'],
   rules: {
     'no-restricted-syntax': ['error', 'LabeledStatement', 'WithStatement'],
-    'linebreak-style': ['error', 'unix'],
     'no-tabs': 'off',
     'import/extensions': [
       'error',
       'ignorePackages',
+      {
+        js: 'always',
+      },
     ],
     'prettier/prettier': [
       'error',
