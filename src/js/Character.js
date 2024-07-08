@@ -1,11 +1,11 @@
 export default class Character {
   constructor(name, type) {
     if (typeof name !== 'string') {
-      throw new Error('Неверное имя');
+      throw new Error('Ошибка в параметре name');
     }
 
     if (name.length < 2 || name.length > 10) {
-      throw new Error('Неверное количество символов имени');
+      throw new Error('Ошибка в параметре name');
     }
 
     const types = [
@@ -18,7 +18,7 @@ export default class Character {
     ];
 
     if (!types.includes(type)) {
-      throw new Error('Неверный тип');
+      throw new Error('Ошибка в параметре type');
     }
 
     this.name = name;

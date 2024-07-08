@@ -58,3 +58,20 @@ test('should not reduce health below zero', () => {
   character.damage(500);
   expect(character.health).toBe(0);
 });
+
+// Дополнительные тесты для покрытия 100% кода
+test('should throw error for non-string name', () => {
+  expect(() => new Character(123, 'Bowerman')).toThrow(
+    'Ошибка в параметре name',
+  );
+});
+
+test('should handle zero attack and defense', () => {
+  const character = new Character('Test', 'Bowerman');
+  character.attack = 0;
+  character.defence = 0;
+  character.levelUp();
+  expect(character.attack).toBeCloseTo(0);
+  expect(character.defence).toBeCloseTo(0);
+  expect(character.health).toBe(100);
+});
