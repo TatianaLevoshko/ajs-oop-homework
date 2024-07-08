@@ -1,13 +1,13 @@
 export default class Character {
   constructor(name, type) {
-    if (
-      !name ||
-      typeof name !== 'string' ||
-      name.length < 2 ||
-      name.length > 10
-    ) {
-      throw new Error('Ошибка в параметре name');
+    if (typeof name !== 'string') {
+      throw new Error('Неверное имя');
     }
+
+    if (name.length < 2 || name.length > 10) {
+      throw new Error('Неверное количество символов имени');
+    }
+
     const types = [
       'Bowerman',
       'Swordsman',
@@ -16,9 +16,11 @@ export default class Character {
       'Undead',
       'Zombie',
     ];
-    if (!types.some((item) => item === type)) {
-      throw new Error('Ошибка в параметре type');
+
+    if (!types.includes(type)) {
+      throw new Error('Неверный тип');
     }
+
     this.name = name;
     this.type = type;
     this.health = 100;
@@ -26,6 +28,7 @@ export default class Character {
     this.attack = undefined;
     this.defence = undefined;
   }
+
   levelUp() {
     if (!this.health) {
       throw new Error('Нельзя воскресить мертвеца');
@@ -35,6 +38,7 @@ export default class Character {
     this.defence += this.defence * 0.2;
     this.health = 100;
   }
+
   damage(points) {
     this.health -= points * (1 - this.defence / 100);
     this.health = this.health < 0 ? 0 : Math.round(this.health);
